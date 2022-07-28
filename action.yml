@@ -23,6 +23,10 @@ inputs:
       The tag name to be associated with the GitHub release that's created or updated.
       This will override any `tag-template` specified in your `release-drafter.yml` if defined.
     required: false
+  last_tag:
+    description: |
+      The previous tag. Used to calculate the next tag if defined.
+    required: false
   version:
     description: |
       The version to be associated with the GitHub release that's created or updated.

@@ -136,6 +136,7 @@ module.exports = (app, { getRouter }) => {
       configName,
       version,
       tag,
+      last_tag,
       name,
       disableReleaser,
       commitish,
@@ -179,6 +180,7 @@ module.exports = (app, { getRouter }) => {
       targetCommitish,
       filterByCommitish,
       tagPrefix,
+      last_tag,
     })
 
     const { commits, pullRequests: mergedPullRequests } =
@@ -247,6 +249,7 @@ function getInput({ config } = {}) {
       configName: core.getInput('config-name'),
       version: core.getInput('version') || undefined,
       tag: core.getInput('tag') || undefined,
+      last_tag: core.getInput('last_tag') || undefined,
       name: core.getInput('name') || undefined,
       disableReleaser:
         core.getInput('disable-releaser').toLowerCase() === 'true',
